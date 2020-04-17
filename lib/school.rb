@@ -7,13 +7,13 @@ def initialize(nameofschool)
   @roster = {}
 end
   
-def add_student (studentname, grade)
+def add_student(studentname, grade)
     if roster[grade] != nil
-      roster[grade]<<studentname
+      roster[grade] << studentname
     else
-    roster[grade] = []
-    roster[grade]<<studentname
-  end
+      roster[grade] = []
+      roster[grade] << studentname
+    end
   roster
 end
 
@@ -23,8 +23,8 @@ end
 
 def sort
   roster.each do |grade, studentnames|
-  roster[grade]=studentnames.sort
-end
+    roster[grade]=studentnames.sort
+  end
 end
 
 end
